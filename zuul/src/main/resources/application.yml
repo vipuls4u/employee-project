@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: employee-zuul-service
+
+zuul:
+  routes:
+    producer:
+      url: http://localhost:2222
+
+
+server:
+  port: 4444
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${registration.server.hostname}:1111/eureka/
